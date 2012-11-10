@@ -145,12 +145,17 @@ function update(ball)
 					
 		ball.vx = ball.vx * drag - gravity;
 		ball.vy = ball.vy * drag; // + gravity;
+    
 	  // slow down near edge
     if ((ball.x - ball.size) < (stageWidth / 5)) {
       var extra = (1 / ((ball.x - ball.size) / (stageWidth / 8)));
       if (extra > 5) ball.vx += 5;
       else ball.vx += extra;
     }
+    
+    // Take to middle
+    if (ball.y + ball.size < (stageHeight / 2 - 30)) ball.vy += .3;
+    if (ball.y - ball.size > (stageHeight / 2 + 30)) ball.vy -= .3;
 }
 			
 			
