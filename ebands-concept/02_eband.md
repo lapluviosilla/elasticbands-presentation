@@ -47,7 +47,7 @@
 -  We now have a complete free path directly to the goal. Which means we no longer need an attractive force directed towards the goal.
 - All imaginary forces are applied to the __path__ itself, not the _robot_!
 
-!SLIDE
+!SLIDE center
 
 # A* Plan (now an elastic band)
 
@@ -57,13 +57,13 @@
 
 .notes We have now converted the global plan to an elastic band.
 
-!SLIDE transition=fade
+!SLIDE center transition=fade
 
 ### First, we apply a _Internal Contraction/Tension Force_ to smooth the path
 
 ![astarsmooth](astar-smooth.jpg)
 
-!SLIDE transition=fade
+!SLIDE center transition=fade
 
 ### Finally, we apply an _External Repulsive Force_ to repel the elastic band from any obstacles
 
