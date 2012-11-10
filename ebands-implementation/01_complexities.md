@@ -1,7 +1,9 @@
 !SLIDE 
 
-  <img src="implementation.jpg" style="float: left; margin: 0, auto; height: 200px;" />
-  <img src="math.png" style="float: right; margin: 0, auto; height: 200px;" />
+<div style="clear: both;">
+  <img src="implementation.jpg" style="float: left; margin: 0, auto; height: 200px; width: 400px;" />
+  <img src="math.png" style="float: right; margin: 0, auto; height: 200px; width: 400px" />
+</div>
   
 !SLIDE incremental center
 
