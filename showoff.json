@@ -1,5 +1,6 @@
 { "name": "Elastic Bands and Potential Fields", "sections": [
    {"section":"cover"}, 
-   {"section":"pfields"} 
-   
+   {"section":"pfields"},
+   {"section":"ebands-concept"},
+   {"section":"ebands-implementation"}
 ]}
