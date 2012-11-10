@@ -2,7 +2,7 @@
 ![background](droplets.jpg)
 
 # Elastic Bands #
-### _- and Potential Fields - Quinlan and Khatib -_
+### _- (and Potential Fields) - Quinlan and Khatib -_
 
 ####  P. Strong
 
