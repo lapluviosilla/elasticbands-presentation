@@ -1,6 +1,6 @@
 !SLIDE light-on-dark center preso-part
 
-# Potential Fields
+# __Potential Fields__
 
 <div id="diagram">
   <img src="/file/pfields/goal.gif" class="goal" />
@@ -20,9 +20,9 @@
 
 ## Basic Implementation and Origin of Potential Fields
 
-* Basic Implementation: Virtual Force Field Method(VFF)  
+* _Basic Implementation:_ Virtual Force Field Method(VFF)  
     * [1989 - Hogan  and Khatib]
-* Premise: There are imaginary forces that act upon the robot: 
+* _Premise:_ There are imaginary forces that act upon the robot: 
   - Obstacles exert repulsive forces on the robot
   - Target applies an attractive force on the robot
 * Becamse popular becase of its simplicity and elegance. 
@@ -36,3 +36,7 @@
 .notes - Each grid cell has certainty values(costmap) for obstacles and they exert repulsive forces
 - There is an attractive Force pulling the robot towards the target
 - And there is a resultant force R
+
+!SLIDE light-on-dark center
+
+# _Simple Enough..._
