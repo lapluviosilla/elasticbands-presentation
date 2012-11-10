@@ -3,8 +3,8 @@
 # __Potential Fields__
 
 <div id="diagram">
-  <img src="/file/pfields/goal.gif" class="goal" />
-  <img src="/file/pfields/wall.png" class="wall" />
+  <img src="goal.gif" class="goal" />
+  <img src="wall.png" class="wall" />
   <canvas id="stage" width="600" height="272" />
 </div>
 
@@ -29,7 +29,7 @@
 * Designed for real-time obstacle avoidance. Allows fast, continuous, and "smooth" motion.
 * [1985'-86' Krogh and Thrope] - Suggest a method for using generalized potential fields for local path planning
 
-!SLIDE histogram full-page
+!SLIDE histogram
 
 ![histogram](histogram.jpg)
 
