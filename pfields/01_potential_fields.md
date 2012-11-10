@@ -29,7 +29,7 @@
 * Designed for real-time obstacle avoidance. Allows fast, continuous, and "smooth" motion.
 * [1985'-86' Krogh and Thrope] - Suggest a method for using generalized potential fields for local path planning
 
-!SLIDE histogram
+!SLIDE histogram center
 
 ![histogram](histogram.jpg)
 

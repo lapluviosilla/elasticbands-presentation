@@ -4,7 +4,7 @@
 
 * Modified Newton's Method Applied to Potential Field-Based Navigation for Mobile Robots (Jing Ren, Kenneth McIssac, and Rajini V. Patel) [2006]
 
-!SLIDE full-page
+!SLIDE full-page center
 
 ![solutions](solutions.png)
 
