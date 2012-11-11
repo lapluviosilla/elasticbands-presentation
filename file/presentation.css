@@ -212,8 +212,12 @@ h3 { font-size: 24px; }
 
 /* slides */
 
-#preso .eband ul > li:before { content: ""; }
+#preso .eband ul > li:before, #preso .nobullet ul > li:before { content: ""; }
 
+
+#preso .slide .smalltxt ul > li {
+  font-size: 22px;
+}
 
 /* wall */
 #diagram {

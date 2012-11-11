@@ -153,7 +153,7 @@
 <li>[1985'-86' Krogh and Thrope] - Suggest a method for using generalized potential fields for local path planning</li>
 </li></ul>
 </div>
-</div><div class="slide" data-transition="none"><div class="content histogram" ref="pfields/01_potential_fields/3">
+</div><div class="slide" data-transition="none"><div class="content histogram center" ref="pfields/01_potential_fields/3">
 <p><img src="./file/pfields/histogram.jpg" width="478" height="621" alt="histogram"/>
 
 <div class="notes"><ul>
@@ -199,7 +199,7 @@
 <ul>
 <li>Modified Newton's Method Applied to Potential Field-Based Navigation for Mobile Robots (Jing Ren, Kenneth McIssac, and Rajini V. Patel) [2006]</li>
 </ul></div>
-</div><div class="slide" data-transition="none"><div class="content full-page" ref="pfields/03_solutions/2">
+</div><div class="slide" data-transition="none"><div class="content center" ref="pfields/03_solutions/2">
 <p><img src="./file/pfields/solutions.png" width="667" height="735" alt="solutions"/>
 
 <div class="notes"><ul>
@@ -298,7 +298,7 @@ is to <u><strong>maintain</strong></u> a <b style="font-size: 35pt;"><em>deforma
 <li> We now have a complete free path directly to the goal. Which means we no longer need an attractive force directed towards the goal.</li>
 <li>All imaginary forces are applied to the <strong>path</strong> itself, not the <em>robot</em>!</li>
 </ul></div>
-</div><div class="slide" data-transition="none"><div class="content" ref="ebands-concept/02_eband/9">
+</div><div class="slide" data-transition="none"><div class="content center" ref="ebands-concept/02_eband/9">
 <h1>A* Plan (now an elastic band)</h1>
 
 <p><img src="./file/ebands-concept/astar-rugged.jpg" width="422" height="409" alt="astarrugged"/>
@@ -309,12 +309,12 @@ is to <u><strong>maintain</strong></u> a <b style="font-size: 35pt;"><em>deforma
 <p>We have now converted the global plan to an elastic band.</p>
 </div></p>
 </div>
-</div><div class="slide" data-transition="fade"><div class="content" ref="ebands-concept/02_eband/10">
+</div><div class="slide" data-transition="fade"><div class="content center" ref="ebands-concept/02_eband/10">
 <h3>First, we apply a <em>Internal Contraction/Tension Force</em> to smooth the path</h3>
 
 <p><img src="./file/ebands-concept/astar-smooth.jpg" width="390" height="389" alt="astarsmooth"/></p>
 </div>
-</div><div class="slide" data-transition="fade"><div class="content" ref="ebands-concept/02_eband/11">
+</div><div class="slide" data-transition="fade"><div class="content center" ref="ebands-concept/02_eband/11">
 <h3>Finally, we apply an <em>External Repulsive Force</em> to repel the elastic band from any obstacles</h3>
 
 <p><img src="./file/ebands-concept/astar-obst.jpg" width="392" height="397" alt="astarobstacle"/></p>
@@ -351,7 +351,7 @@ is to <u><strong>maintain</strong></u> a <b style="font-size: 35pt;"><em>deforma
 <li>Explain why free space is computationally expensive to generate and represent. The robot can be a complex 3d manifold with joints and other moving parts.</li>
 <li>Second complexity, we have to check curves rather than line </li>
 </ul></div></div>
-</div><div class="slide" data-transition="none"><div class="content bgfull light-on-dark" ref="ebands-implementation/02_whybubbles/1">
+</div><div class="slide" data-transition="none"><div class="content bgfull light-on-dark center" ref="ebands-implementation/02_whybubbles/1">
 <p><img src="./file/ebands-implementation/../cover/droplets.jpg" width="800" height="800" alt="background"/>
 
 <h1>Why Bubbles?</h1>
@@ -412,6 +412,113 @@ of the robot at a given configuration."
 
 <div class="notes">
 <p>Obviously, bubbles are a coarse representation of the free space around the robot. There&#x2019;s a possibility of using ellipses or other shapes, but this increases the complexity of bubble computation. Essentially, not explored.</p>
+</div></div>
+</div><div class="slide" data-transition="none"><div class="content force-slide subsection" ref="ebands-implementation/03_math-internal/1">
+<h1>Internal Contraction Force Equation</h1>
+
+<p><img src="./file/ebands-implementation/tensioneq.png" width="715" height="268" alt="tensionequation"/></p>
+</div>
+</div><div class="slide" data-transition="fade"><div class="content force-slide subsection" ref="ebands-implementation/03_math-internal/2">
+<h1>Internal Contraction Force Equation</h1>
+
+<p><img src="./file/ebands-implementation/tensioneq1.png" width="715" height="268" alt="tensionequation"/></p>
+</div>
+</div><div class="slide" data-transition="slideY">
+  <div class="content force-slide subsection incremental longtext" ref="ebands-implementation/03_math-internal/3">
+<h1>Internal Contraction Force Equation</h1>
+
+<ul>
+<li>It represents a series of springs of uniform tension between the bubbles </li>
+<li>We normalize the tension because we only care about removing slack</li>
+</ul><div class="notes">
+<p>it represents a series of springs between the bubbles uniform tension
+If time, create vector diagram of forces.
+The force from each spring is normalized to reflrect uniform tension. The distance doesn&#x2019;t matter, just direction. If the distance is larger then one of the bubbles is larger as well.</p>
+</div>
+
+<p><img src="./file/ebands-implementation/tensioneq2.png" width="715" height="268" alt="tensionequation"/>
+
+<div style="clear: both;">
+  <img src="./file/ebands-implementation/springeq1.png" width="401" height="98" style="float: left;"><span style="height: 120px; float: right;"><img src="./file/ebands-implementation/springeq2.png" width="401" height="49"/>
+</span>
+
+<script>
+  $('.force-slide').bind('showoff:show', function(event) {
+    $(event.target).css('margin-top', '80px');
+  });
+</script></img>
+</div>
+</p></div>
+</div><div class="slide" data-transition="none"><div class="content force-slide smalltxt subsection" ref="ebands-implementation/04_math-repulsive/1">
+<h1>Repulsive Force Equation</h1>
+
+<p>"The repulsive force pushes the bubbles away from the obstacles to increase the clearance of the robot."</p>
+
+<h3>"The size of a bubble gives an indication of how far the robot is from collision so we define the repulsive force such that it increases this size"</h3>
+
+<p><img src="./file/ebands-implementation/repulsiveeq2.png" width="582" height="239" alt="repuslive1"/>
+
+<div class="notes">
+<p>The proportional modifier is not used in the implementation - marked TODO</p>
+</div></p>
+</div>
+</div><div class="slide" data-transition="slideY">
+  <div class="content force-slide subsection" ref="ebands-implementation/04_math-repulsive/2">
+<h1>Repulsive Force Equation</h1>
+
+<p><img src="./file/ebands-implementation/repulsiveeq2.png" width="582" height="239" alt="repulsive1"/>
+
+<p><img src="./file/ebands-implementation/gradienteq1.png" width="695" height="199" alt="gradient1"/>
+
+<div class="notes">
+<p>In summary, it is a downhill gradient search</p>
+</div></p>
+</p>
+</div>
+</div><div class="slide" data-transition="none">
+  <div class="content center nobullet incremental" ref="ebands-implementation/04_math-repulsive/3">
+<h1>Update bubble positions</h1>
+
+<ul>
+<li><p><img src="./file/ebands-implementation/updatebubble.png" width="612" height="64" alt="updatebubble"/></p>
+<li><p><img src="./file/ebands-implementation/alphaval.png" width="341" height="75" alt="alphaval"/></p>
+<li><h3>Which basically means large bubbles will move more than small bubbles</h3></li>
+</li></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="ebands-implementation/05_math-tangential/1">
+<h1>How do we solve bubble migration and oscillations?</h1>
+
+<div class="notes"><ul>
+<li>draw force graph that would cause bubble to migrate along path.
+-Illustrate how removing tangential component works</li>
+</ul></div></div>
+</div><div class="slide" data-transition="none">
+  <div class="content longtext incremental center nobullet" ref="ebands-implementation/05_math-tangential/2">
+<h1>By surpressing the tangential component of the force</h1>
+
+<p><img src="./file/ebands-implementation/tangeq1.png" width="700" height="150" alt="tangeq"/>
+
+<ul>
+<li><p class="..">the vector projection of F onto the vector between the neighboring bubbles</p></li>
+<li><p><img src="./file/ebands-implementation/vecproj.png" width="290" height="82" alt="vecproj"/></p>
+</li><div class="notes">
+<p>Explain with drawn graph.</p>
+</div></ul>
+</p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="ebands-implementation/06-flow">
+<h1>Elastic Band Update Loop</h1>
+
+<ol>
+<li>Convert each of the path points to a bubble (first time, and new frames)</li>
+<li>Update bubble sizes to min obstacle distances</li>
+<li>Check for gaps in bubble path, interpolate and try and complete it by inserting one bubble.</li>
+<li>Remove redundant bubbles. (If two neighbors of a bubble overlap, then the bubble may be removed)</li>
+<li>Apply artificial forces to bubbles and re-optimize(insert and remove bubbles)</li>
+</ol><div class="notes">
+<p>-Step 3 is applied recursively on first conversion.
+-Step 5 iterated 3 times in implementation</p>
 </div></div>
 </div></div>
 <div id="pauseScreen">
