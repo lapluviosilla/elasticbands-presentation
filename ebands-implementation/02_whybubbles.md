@@ -1,4 +1,4 @@
-!SLIDE bgfull light-on-dark
+!SLIDE bgfull light-on-dark center
 ![background](../cover/droplets.jpg)  
 
 # Why Bubbles?
